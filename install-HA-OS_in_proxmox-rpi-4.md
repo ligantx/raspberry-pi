@@ -33,4 +33,6 @@ You can do everything from ssh but its easier to use a keyboard/mouse/display co
 * **delete** CD/DVD (ide2) drive
 * Go to options and boot order, enable and put first the scsi disk.
 * Run the VM and **wait** until you see the banner (the one that shows the HA ip address). THIS ip is the one you'll use to enter HA and **not** the one of raspberry pi os host.
+* Install [guest agent](https://pycvala.de/blog/raspberry-pi/raspberry-pi-installing-proxmox-ve-7-on-the-pi-4/#what-youll-need)
 * Now, you can restore your snapshots from previous HA as usual (you can follow the previous video for more).
+
