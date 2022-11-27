@@ -23,7 +23,7 @@ You can do everything from ssh but its easier to use a keyboard/mouse/display co
  
  # Connect HA OS with the VM
  
-* This is important: you have to download aarch64 HA OS image from [here](https://github.com/home-assistant/operating-system/releases/download/9.3/haos_generic-aarch64-9.3.qcow2.xz) 
+* **This is important**: For raspberry pi you have to download **aarch64** HA OS image from [here](https://github.com/home-assistant/operating-system/releases/download/9.3/haos_generic-aarch64-9.3.qcow2.xz).
 
 * Unzip the `haos_generic-aarch64-9.3.qcow2.xz`. Now you will have `haos_generic-aarch64-9.3.qcow2` file.
 
@@ -32,4 +32,5 @@ You can do everything from ssh but its easier to use a keyboard/mouse/display co
 * As the video, detach your VM hard disk drive, delete this drive, and add your imported disk.
 * **delete** CD/DVD (ide2) drive
 * Go to options and boot order, enable and put first the scsi disk.
-* Run the VM and **wait** until you see the banner (the one that shows the HA ip address). THIS ip is the one you'll use to enter HA and **not** the one of raspberry pi os host. 
+* Run the VM and **wait** until you see the banner (the one that shows the HA ip address). THIS ip is the one you'll use to enter HA and **not** the one of raspberry pi os host.
+* Now, you can restore your snapshots from previous HA as usual (you can follow the previous video for more).
