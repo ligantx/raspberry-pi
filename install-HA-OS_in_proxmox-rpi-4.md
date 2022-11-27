@@ -12,7 +12,7 @@ You can do everything from ssh but its easier to use a keyboard/mouse/display co
 
 # Install Pimox and create VM
 * as sudo install pimox with the info [here](https://github.com/pimox/pimox7) (automatic installer worked fine)
-* if everything is fine you can enter Pimox with your_ip_address:8006 (login_user: root, password: your password)
+* if everything is fine you can enter Pimox with `your_raspberry_pi_ip_address:8006` (login_user: root, password: your password)
 * Make sure under your node in System and network, you have eth0 network device **and** a linux bridge already there.
 * Create a new VM (change only the following, the rest are default):
   * Use VM ID: 100
