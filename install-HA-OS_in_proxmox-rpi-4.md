@@ -51,5 +51,5 @@ for example it can be:
 4. go inside the VM and find your zigbee device as usual, or run Terminal add on and write: `ls /dev/serial/by-id` and your device should apear.
 
 
-* In case you use Frigate: it will not work if you have hardware accelerators: You have to delete `ffmpeg: hwaccel_args: ` lines in frigate.yml
+* In case you use Frigate: it will not work if you have hardware accelerators: You have to delete `ffmpeg: hwaccel_args: ` lines in `frigate.yml`
 
