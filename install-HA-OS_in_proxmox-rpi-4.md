@@ -36,3 +36,20 @@ You can do everything from ssh but its easier to use a keyboard/mouse/display co
 * Install [guest agent](https://pycvala.de/blog/raspberry-pi/raspberry-pi-installing-proxmox-ve-7-on-the-pi-4/#what-youll-need)
 * Now, you can restore your snapshots from previous HA as usual (you can follow the previous video for more).
 
+# HA OS FIXES
+
+* USB devices cannot be used from guest HA OS proxmox VM (maybe a bug in pimox?). So, if you have for example a Sonoff Zigbee 3 usb stick, you should follow the info found [here](https://github.com/pimox/pimox7/issues/48#issuecomment-1065759910) you can fix it:
+
+1. Go to Proxmox GUI and your device Shell (under Datacenter) and write the following:
+`vim /etc/pve/qemu-server/<VMID>.conf`. For example: `vim /etc/pve/qemu-server/100.conf`
+2. go to the end of the file and press `o` and paste the following:
+`args: -device qemu-xhci -device usb-host,vendorid=<0xVendorid>,productid=<0xProductid>`
+you'll find vendor and product id from Hardware page of the VM in proxmox GUI, if we try to add a usb device.
+for example it can be:
+`args: -device qemu-xhci -device usb-host,vendorid=0x11b2,productid=0xjk30`
+3. restart the VM
+4. go inside the VM and find your zigbee device as usual, or run Terminal add on and write: `ls /dev/serial/by-id` and your device should apear.
+
+
+* In case you use Frigate: it will not work if you have hardware accelerators: You have to delete `ffmpeg: hwaccel_args: ` lines in frigate.yml
+
