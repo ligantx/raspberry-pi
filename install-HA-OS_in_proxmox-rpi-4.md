@@ -53,3 +53,10 @@ for example it can be:
 
 * In case you use Frigate: it will not work if you have hardware accelerators: You have to delete `ffmpeg: hwaccel_args: ` lines in `frigate.yml`
 
+# TAILSCALE
+
+1. Install it with Tailscale add on in HA.
+2. From the tailscale admin panel enable `subnet routes` for example `192.168.X.0/24` (maybe you'll need to find more info about the installation in Tailscale's page). 
+3. Try to go out of the network and enter 192.168.X.X:8123 (your HA ip) as usual. I found that if raspberry pi (proxmox vmbr0) has the same ip with HA it makes tailscale unstable. Better change the vmbr0 ip from proxmox node network page.
+4. You can also enable exit node in tailscale admin page. So, if you enable it in e.g. android client, you can enter every page for example `google.com` using your vpn (maybe useful if you are in a cafeteria), but makes your connection slower.
+
