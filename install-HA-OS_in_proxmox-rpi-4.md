@@ -69,8 +69,14 @@ Easiest install with docker from [here](https://manual.seafile.com/docker/deploy
 3. copy the yml file from [here](https://download.seafile.com/d/320e8adf90fa43ad8fee/files/?p=/docker/docker-compose.yml)
 and paste it here:
 `vim docker-compose.yml` and save with :wq
-4. change `MY_ROOT_PASSWORD` and `DB_ROOT_PASSWD` to your password, `SEAFILE_ADMIN_EMAIL` to your email
+4. change `MY_ROOT_PASSWORD` and `DB_ROOT_PASSWD` to your password, `SEAFILE_ADMIN_EMAIL` to your email and `SEAFILE_ADMIN_PASSWORD` to your password
 5. db volumes to:
 `- /home/YOUR_USER/seafile/seafile-mysql/db:/var/lib/mysql`
-and seafile volumes to:
+ports to:
+`- "8080(or your port of preference):80"`
+
+seafile volumes to:
 `- /home/YOUR_USER/seafile/seafile-data:/shared`
+
+6. Enter your seafile admin page:
+`http://rpi-ip:8080` and enter with your admin email and password
