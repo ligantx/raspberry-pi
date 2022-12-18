@@ -64,19 +64,26 @@ for example it can be:
 
 Easiest install with docker from [here](https://manual.seafile.com/docker/deploy_seafile_with_docker/)
 
+Nice info video [here](https://www.youtube.com/watch?v=gQ1WYgy6Z8s&t=265s)
+
 1. `sudo apt-get install docker-compose -y`
-2. `mkdir ~/seafile && cd ~/seafile`
+2. `mkdir ~/docker/seafile && cd ~/docker/seafile`
 3. copy the yml file from [here](https://download.seafile.com/d/320e8adf90fa43ad8fee/files/?p=/docker/docker-compose.yml)
 and paste it here:
 `vim docker-compose.yml` and save with :wq
 4. change `MY_ROOT_PASSWORD` and `DB_ROOT_PASSWD` to your password, `SEAFILE_ADMIN_EMAIL` to your email and `SEAFILE_ADMIN_PASSWORD` to your password
 5. db volumes to:
-`- /home/YOUR_USER/seafile/seafile-mysql/db:/var/lib/mysql`
+`- /home/YOUR_USER/docker/seafile/seafile-mysql/db:/var/lib/mysql`
 ports to:
 `- "8080(or your port of preference):80"`
-
 seafile volumes to:
-`- /home/YOUR_USER/seafile/seafile-data:/shared`
+`- /home/YOUR_USER/docker/seafile/seafile-data:/shared`
 
 6. Enter your seafile admin page:
 `http://rpi-ip:8080` and enter with your admin email and password
+
+7. If you want to change admin password in terminal run (info [here](https://forum.seafile.com/t/reset-admin-password/15807)):
+`docker exec -it seafile /opt/seafile/seafile-server-latest/reset-admin.sh`
+
+8. if you want to see your seafile files directly you can use [seafile fuse](https://manual.seafile.com/extension/fuse/#how-to-start-seaf-fuse-in-docker)
+
