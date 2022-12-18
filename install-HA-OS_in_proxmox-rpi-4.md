@@ -60,3 +60,4 @@ for example it can be:
 3. Try to go out of the network and enter 192.168.X.X:8123 (your HA ip) as usual. I found that if raspberry pi (proxmox vmbr0) has the same ip with HA it makes tailscale unstable. Better change the vmbr0 ip from proxmox node network page.
 4. You can also enable exit node in tailscale admin page. So, if you enable it in e.g. android client, you can enter every page for example `google.com` using your vpn (maybe useful if you are in a cafeteria), but makes your connection slower.
 
+# SEAFILE
