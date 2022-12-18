@@ -61,3 +61,16 @@ for example it can be:
 4. You can also enable exit node in tailscale admin page. So, if you enable it in e.g. android client, you can enter every page for example `google.com` using your vpn (maybe useful if you are in a cafeteria), but makes your connection slower.
 
 # SEAFILE
+
+Easiest install with docker from [here](https://manual.seafile.com/docker/deploy_seafile_with_docker/)
+
+1. `sudo apt-get install docker-compose -y`
+2. `mkdir ~/seafile && cd ~/seafile`
+3. copy the yml file from [here](https://download.seafile.com/d/320e8adf90fa43ad8fee/files/?p=/docker/docker-compose.yml)
+and paste it here:
+`vim docker-compose.yml` and save with :wq
+4. change `MY_ROOT_PASSWORD` and `DB_ROOT_PASSWD` to your password, `SEAFILE_ADMIN_EMAIL` to your email
+5. db volumes to:
+`- /home/YOUR_USER/seafile/seafile-mysql/db:/var/lib/mysql`
+and seafile volumes to:
+`- /home/YOUR_USER/seafile/seafile-data:/shared`
