@@ -87,3 +87,6 @@ seafile volumes to:
 
 8. if you want to see your seafile files directly you can use [seafile fuse](https://manual.seafile.com/extension/fuse/#how-to-start-seaf-fuse-in-docker)
 
+# Extra Resources
+
+[https://gist.github.com/luckydonald/1849291fb5e19c87df8c8a1618e29eaa#pimox](https://gist.github.com/luckydonald/1849291fb5e19c87df8c8a1618e29eaa#pimox)
