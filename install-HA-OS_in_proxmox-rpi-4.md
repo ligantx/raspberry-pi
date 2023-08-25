@@ -11,7 +11,7 @@ A detailed guide can be found [here](https://pycvala.de/blog/raspberry-pi/raspbe
 You can do everything from ssh but its easier to use a keyboard/mouse/display connected to the rpi.
 
 # Install Pimox and create VM
-* as sudo install pimox with the info [here](https://github.com/pimox/pimox7) (automatic installer worked fine)
+* as sudo install pimox with the info [here](https://github.com/pimox/pimox7) (automatic installer worked fine). Do not change `/etc/dhcpcd.conf` file. During installation insert the ip raspberry pi has already.
 * if everything is fine you can enter Pimox with `your_raspberry_pi_ip_address:8006` (login_user: root, password: your password)
 * Make sure under your node in System and network, you have eth0 network device **and** a linux bridge already there.
 * Create a new VM (change only the following, the rest are default):
