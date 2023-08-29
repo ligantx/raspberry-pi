@@ -14,7 +14,9 @@ You can do everything from ssh but its easier to use a keyboard/mouse/display co
 
 * The promox backups are stored in `/var/lib/vz/dump`. Copy the file there somewhere safe.
 * Install Raspberry Pi OS 64bit and install promox.
-* Copy the backup files in `/var/lib/vz/dump` again. From Promox UI go to Datacenter, Rapsberry (the name of your node), local (your storage) and Backups, where you will see your saved backup. 
+* Copy the backup files in `/var/lib/vz/dump` again. From Promox UI go to Datacenter, Rapsberry (the name of your node), local (your storage) and Backups, where you will see your saved backup.
+* Restore the backup, and run the VM. Wait..
+* If HA ipv4 address is not accessible try ipv6, or ipv4 routing. 
 
 # Install Pimox and create VM
 * as sudo install pimox with the info [here](https://github.com/pimox/pimox7) (automatic installer worked fine). Do not change `/etc/dhcpcd.conf` file. During installation insert the ip raspberry pi has already.
