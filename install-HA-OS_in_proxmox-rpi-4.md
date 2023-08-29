@@ -13,7 +13,7 @@ You can do everything from ssh but its easier to use a keyboard/mouse/display co
 # Restore from promox backup
 
 * The promox backups are stored in `/var/lib/vz/dump`. Copy the file there somewhere safe.
-* Install Raspberry Pi OS 64bit and install promox.
+* Install Raspberry Pi OS 64bit and install promox (node: raspberry, ip: the same as the one you ssh to raspberry).
 * Copy the backup files in `/var/lib/vz/dump` again. From Promox UI go to Datacenter, Rapsberry (the name of your node), local (your storage) and Backups, where you will see your saved backup.
 * Restore the backup, and run the VM. Wait..
 * If HA ipv4 address is not accessible try ipv6, or ipv4 routing. 
