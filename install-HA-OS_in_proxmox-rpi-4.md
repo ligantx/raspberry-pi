@@ -10,6 +10,12 @@ A detailed guide can be found [here](https://pycvala.de/blog/raspberry-pi/raspbe
 
 You can do everything from ssh but its easier to use a keyboard/mouse/display connected to the rpi.
 
+# Restore from promox backup
+
+* The promox backups are stored in `/var/lib/vz/dump`. Copy the file there somewhere safe.
+* Install Raspberry Pi OS 64bit and install promox.
+* Copy the backup files in `/var/lib/vz/dump` again. From Promox UI go to Datacenter, Rapsberry (the name of your node), local (your storage) and Backups, where you will see your saved backup. 
+
 # Install Pimox and create VM
 * as sudo install pimox with the info [here](https://github.com/pimox/pimox7) (automatic installer worked fine). Do not change `/etc/dhcpcd.conf` file. During installation insert the ip raspberry pi has already.
 * if everything is fine you can enter Pimox with `your_raspberry_pi_ip_address:8006` (login_user: root, password: your password)
