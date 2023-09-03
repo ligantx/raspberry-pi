@@ -75,7 +75,7 @@ Easiest install with docker from [here](https://manual.seafile.com/docker/deploy
 Nice info video [here](https://www.youtube.com/watch?v=gQ1WYgy6Z8s&t=265s)
 
 1. `sudo apt-get install docker-compose -y`
-2. `mkdir ~/docker/seafile && cd ~/docker/seafile`
+2. `mkdir -p ~/docker/seafile && cd ~/docker/seafile`
 3. copy the yml file from [here](https://download.seafile.com/d/320e8adf90fa43ad8fee/files/?p=/docker/docker-compose.yml)
 and paste it here:
 `vim docker-compose.yml` and save with :wq
