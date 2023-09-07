@@ -98,3 +98,7 @@ seafile volumes to:
 # Extra Resources
 
 [https://gist.github.com/luckydonald/1849291fb5e19c87df8c8a1618e29eaa#pimox](https://gist.github.com/luckydonald/1849291fb5e19c87df8c8a1618e29eaa#pimox)
+
+# Extra Tips
+
+From Pimox console, you can see HA terminal. With `login` you can view sh shell (you can run docker etc). For login to HA cli try: `root` 
